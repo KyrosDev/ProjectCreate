@@ -1,6 +1,0 @@
-{
-    "python.pythonPath": "/mnt/e/Documents/Projects/Automatizations/create/.venv/bin/python3",
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "python.formatting.provider": "yapf"
-}
