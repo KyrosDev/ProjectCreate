@@ -4,7 +4,7 @@ import os
 from utils.File import File
 from utils.Types import ProjectType
 
-PROJECTS_PATH = str("E:\\Documents\\Projects")
+PROJECTS_PATH = "/mnt/e/Documents/Projects"
 
 PROJECTS_TYPES = list([
     "flutter",
@@ -53,7 +53,7 @@ def main():
 """))
     number = int(input(PROJECT_TYPE_INPUT_STRING))
     if (number > len(PROJECTS_TYPES)):
-        print("Select a project in range 0 - 4")
+        print(str("Select a project in range 0 - 4"))
         number = int(input(PROJECT_TYPE_INPUT_STRING))
     project_type = PROJECTS_TYPES[number]
     project_name = str(input(PROJECT_NAME_INPUT_STRING))
