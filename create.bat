@@ -1,2 +1,2 @@
 @echo off
-python E:\Documents\Projects\Automatizations\create\v2.py
+python3 -m E:\Documents\Projects\Automatizations\create\v2.py

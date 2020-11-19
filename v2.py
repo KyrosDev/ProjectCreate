@@ -6,13 +6,7 @@ from utils.Types import ProjectType
 
 PROJECTS_PATH = "/mnt/e/Documents/Projects"
 
-PROJECTS_TYPES = list([
-    "flutter",
-    "node",
-    "vue",
-    "python",
-    "dart"
-])
+PROJECTS_TYPES = list(["flutter", "node", "vue", "python", "dart"])
 
 COLORS = dict({
     "red": "\u001b[31m",
@@ -38,14 +32,19 @@ PROJECT_NAME_INPUT_STRING = str("{} - Insert your project name: {}".format(
 
 
 def main():
+    os.chdir(PROJECTS_PATH)
     os.system("cls")
-    print(str("{}{}{}CREATE PROJECT".format(
-        COLORS["green"], TYPES["reversed"], TYPES["bold"])))
-    print(str("{}Create a project in few seconds with just one command!!!".format(
-        COLORS["reset"])))
-    print(str(
-        "{} - Select your project type: {}".format(COLORS["magenta"], COLORS["reset"])))
-    print(str("""    - [0] Flutter App
+    print(
+        str("{}{}{}CREATE PROJECT".format(COLORS["green"], TYPES["reversed"],
+                                          TYPES["bold"])))
+    print(
+        str("{}Create a project in few seconds with just one command!!!".
+            format(COLORS["reset"])))
+    print(
+        str("{} - Select your project type: {}".format(COLORS["magenta"],
+                                                       COLORS["reset"])))
+    print(
+        str("""    - [0] Flutter App
     - [1] NodeJS Server
     - [2] VueJS WebApp
     - [3] Python Module
@@ -61,11 +60,11 @@ def main():
         project_name = str(input(PROJECT_NAME_INPUT_STRING))
     project = list([project_name, project_type])
     file = File(project)
-    os.chdir(PROJECTS_PATH)
     file.create()
     path = str(PROJECTS_PATH.replace("\\", "/"))
-    print(str(
-        f"\n{COLORS['green']}{TYPES['underline']}You can find your project in: {path}/{project_name}\n"))
+    print(
+        str(f"\n{COLORS['green']}{TYPES['underline']}You can find your project in: {path}/{project_name}\n"
+            ))
 
 
 if __name__ == "__main__":
